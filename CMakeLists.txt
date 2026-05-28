@@ -10,12 +10,12 @@ Include(FetchContent)
 FetchContent_Declare(
   Catch2
   GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-  GIT_TAG        v3.8.1
+  GIT_TAG        v3.15.0
 )
 
 FetchContent_MakeAvailable(Catch2)
 
-add_executable(hello_test tests/hello_test.cpp src/hello.cpp)
-add_executable(main main.cpp src/hello.cpp)
+add_executable(oak_test tests/oak_test.cpp src/oak.cpp)
+add_executable(main main.cpp src/oak.cpp)
 
-target_link_libraries(hello_test PRIVATE Catch2::Catch2WithMain)
+target_link_libraries(oak_test PRIVATE Catch2::Catch2WithMain)
